@@ -7,7 +7,10 @@ Linnéuniversitet, HT 2020
 Struktur:
 1 | Basinställningar
 2 | Header
-
+3 | Footer
+4 | Index
+5 | Main
+6 | Fråga 2
 --------------------*/
 
 /*----- 1 | Basinställningar -----*/
@@ -38,3 +41,44 @@ Struktur:
     font-size: 16pt;
     color: white;
 }
+
+/*----- 3 | Footer -----*/
+footer {
+    bottom: 0;
+    background-color: black;
+    height: 80px;
+    width: 100%;
+    text-align: right;
+    margin-top: 2em;
+}
+
+footer p {
+    color: white;
+    padding: 2em 2em 0;
+}
+
+/*----- 4 | Index -----*/
+.header {
+    padding: 2em;
+}
+
+/*----- 5 | Main -----*/
+.questions {
+    padding: 0em 0 0em 3em;
+}
+
+.questions h2 {
+    margin-bottom: 1em;
+}
+
+.answer {
+    max-width: 800px;
+    text-align: justify;
+}
+
+/*----- 6 | Fråga 2 -----*/
+
+.list, .list2 {
+    margin-left: 2em;
+}
+
