@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Website Title -->
-    <title>1ME321 - Uppgift 1</title>
+    <title>1ME321 - Fråga 3</title>
 
     <!-- Stylesheets -->
     <link rel="stylesheet" href="style.css">
@@ -39,13 +39,45 @@
     <!-- Main Section -->
     <main>
         <div class="header">
-            <h1>Welcome! This is the Index page</h1>
+            <h1>Fråga 3 - CSS</h1>
+           <a href="/media/cascade.jpeg"><img src="/media/cascade.jpeg" alt="picture of some html elements" class="hero"></a> 
+
+        </div>
+        <div class="questions">
+            <h2>1. Vad är en regel i CSS och vad består den av?</h2>
+            <h2>2. Vad menas med kaskad i CSS?
+
+                <h2>Svar:</h2>
+
+                <h3>1:</h3>
+                <p class="answer">
+                    En regel i CSS är en gruppering av en eller flera egenskaper man vill applicera
+                    till HTML element. Regeln består av en selektor och en uppsättning egenskaper. Selektorn
+                    pekar ut vilken klass eller vilket id man vill applicera regeln på och sedan kan man bestämma
+                    bakgrundsfärg, storlek och en nära oändlig mängd egenskaper man vill koppla till det elementet.
+
+                </p>
+                <br>
+                <h3>2:</h3>
+                <p class="answer">
+                    Kaskad i avseende till CSS som får del av sitt namn från begreppet (cascading style sheets)
+                    avser kort i vilken ordning regler appliceras. Man kan hamna i ett scenario där två regler
+                    specifieras
+                    för ett element och då väljer CSS att applicera den regel som definieras längst ned i dokumentet.
+                    Detta är dock
+                    en sanning med viss modifikation som inte appliceras i det fall då element specifieras närmare.
+                    Exempelvis ifall
+                    vi har en klass på ett h1 element som vi döpt till "heading" och först i kaskadordning specifierat
+                    att denna ska vara röd,
+                    så kommer efterföljande regler riktade mot enbart h1-element att ignoreras.
+                </p>
+
         </div>
 
     </main>
 
     <!-- Footer Section-->
-    <footer>
+    <footer id="footer">
         <!-- Credits -->
         <a href="https://www.johnemericks.se/">
             <p>John Emericks, HT2020</p>
