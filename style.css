@@ -1,108 +1,701 @@
-/*
-Kod skriven av John Emericks
-Linnéuniversitet, HT 2020
-*/
+/*--------------------------------
+Code Written by John Emericks
+www.johnemericks.se
+2020
+--------------------------------*/
 
 /*--------------------
-Struktur:
-1 | Basinställningar
+Structure:
+1 | Base Settings
 2 | Header
-3 | Footer
-4 | Index
-5 | Main
-6 | Fråga 2
+3 | Typography
+4 | Hero Section
+5 | Services Section
+6 | About Section
+7 | Psychotherapy Section
+8 | How Section
+9 | Rules Section
 --------------------*/
 
-/*----- 1 | Basinställningar -----*/
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
 
-* {
-    margin: 0;
-    padding: 0;
-    font-family: 'Montserrat',
-        sans-serif;
-}
+/*---------- 1 | Base Settings ----------*/
 
 body {
-    background-color: aliceblue;
+    overflow-x: hidden;
+    height: auto;
 }
 
-a:hover {
-    color: yellow;
+@media only screen and (min-width: 1200px) {
+
+    .mobile-break {
+        display: none;
+    }
 }
 
-/*----- 2 | Header -----*/
-.navigation {
-    background-color: black;
-    height: 70px;
-    padding-top: 2em;
+@media only screen and (max-width: 1200px) {
 
+    body,
+    html {
+        overflow-x: hidden;
+        height: 100%;
+    }
+
+    #mobile-hidden {
+        display: none;
+    }
 }
 
-.navigation a {
+
+a {
     text-decoration-line: none;
+    list-style: none;
+}
+
+.divider {
+    max-height: 350px;
+    width: 100%;
+}
+
+
+@media only screen and (max-width: 991px) {
+    #mobile-hidden {
+        display: none;
+    }
+}
+
+/*---------- 2 | Header ----------*/
+
+header {
+    background-color: #003a40;
+    height: 80px;
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+}
+
+.logo {
+    margin-top: 10px;
+    width: 300px;
+}
+
+.navigation {
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin-top: 7em;
+    margin-right: 4em;
+    z-index: 999;
+    font-family: "Magnat-Head";
+}
+
+
+.navigation ul {
+    background-color: #e3e5e9;
+    padding: 2em 4em 2em 4em;
 }
 
 .navigation ul li {
-    display: inline;
-    margin-left: 3em;
-    font-size: 16pt;
-    color: white;
+    padding: .5em;
+    margin-bottom: .5em;
+    color: #3e4243;
+    font-size: 14pt;
+    font-weight: 600;
 }
 
-.navigation ul li:hover {
-
-    color: yellow;
-}
-
-/*----- 3 | Footer -----*/
-#footer {
-    bottom: 0;
-    background-color: black;
-    height: 80px;
-    width: 100%;
-    text-align: right;
-    margin-top: 2em;
-    position: fixed;
-}
-
-#footer p {
-    color: white;
-    padding: 2em 2em 0;
-}
-
-/*----- 4 | Index -----*/
-.header h1 {
+.hamburger {
+    display: inline-block;
+    cursor: pointer;
+    margin-top: 17px;
+    margin-right: 2em;
+    overflow: hidden;
     position: absolute;
-    margin-top: -14em;
-    margin-left: 0em;
-    background: rgb(255, 255, 255, 0.7);
-    padding: 1em;
+    top: 0;
+    right: 0;
 }
 
-.hero {
+.bar1,
+.bar2,
+.bar3 {
+    width: 45px;
+    height: 4px;
+    background-color: #e9d9cf;
+    margin: 8px 0;
+    transition: 0.4s;
+}
+
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.change .bar2 {
+    opacity: 0;
+}
+
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+}
+
+/*---------- 3 | Typography ----------*/
+@font-face {
+    font-family: "Magnat-Head";
+    src: url(/fonts/Magnat-HeadMedium/font.woff);
+    src: url(/fonts/Magnat-HeadMedium/font.woff2);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
+
+
+/*---------- 4 | Hero Section ----------*/
+
+#hero {
+    background-color: #e9d9cf;
+    padding-top: 80px;
+}
+
+.hero-banner {
     width: 100%;
-    padding: 0;
 }
 
-/*----- 5 | Main -----*/
-.questions {
-    padding: 2em 2em 0em 2em;
-    margin-bottom: 8em;
+.hero-text {
+    margin-top: 60px;
+    padding: 3em;
+    color: #122729;
+    font-family: "Magnat-Head";
 }
 
-.questions h2 {
+.hero-text p {
+    max-width: 600px;
+    padding: 1em 0em 0em 0em;
+    font-weight: 600;
+    font-size: 12pt;
+}
+
+#hero-row {
+    font-family: 'Open Sans', sans-serif;
+    margin-top: -5em;
+    text-align: center;
+    justify-content: center;
+}
+
+.hero-button {
+    background-color: #003a40;
+    color: #e9d9cf;
+    height: 120px;
+    width: 250px;
+    padding: 1em 1em 1em 1em;
+    z-index: 998;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.hero-button:hover {
+    background-color: #487a7b;
+    text-decoration: none;
+}
+
+.hero-button a:hover {
+    color: #e9d9cf;
+    text-decoration-line: none;
+}
+
+.hero-button a {
+    color: #e9d9cf;
+}
+
+.hero-button p {
+    font-size: 8pt;
+}
+
+.hero-button h4 {
+    font-weight: 600;
+    font-size: 16pt;
+    margin-top: 7px;
+}
+
+.flowers {
+    margin-top: -4em;
+}
+
+@media only screen and (min-width: 1500px) {
+    .hero-banner {
+        height: auto;
+        width: 80%;
+    }
+}
+
+
+@media only screen and (max-width: 1080px) {
+    .hero-text {
+        margin-top: -1em;
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .hero-button {
+        width: 100%;
+        margin-top: 1em;
+    }
+
+    .hero-row {
+        margin-top: 5px;
+        padding-bottom: 5em;
+    }
+
+
+
+}
+
+/*---------- 5 | Services Section ----------*/
+#services {
+    background-color: #eaebef;
+}
+
+.service-image {
+    width: 100%;
+    float: right;
+}
+
+.services-text {
+    width: 90%;
+    margin-left: 3em;
+    margin-top: 3em;
+    font-family: 'Open Sans',
+        sans-serif;
+}
+
+.services-text ul {
+    margin-left: -1.3em;
+    margin-top: 1em;
+}
+
+.services-text ul li {
+    font-size: 10pt;
+}
+
+.services-header {
+    font-family: "Magnat-Head";
+
+}
+
+.line {
+    width: 55%;
+    border-top: 1.5px solid black;
+    margin-left: 3em;
+    margin-top: 3em;
+    margin-bottom: 6em;
+}
+
+@media only screen and (max-width: 800px) {
+    .line {
+        width: 90%;
+        border-top: 1.5px solid black;
+        margin-left: 0;
+        margin-top: 3em;
+        margin-bottom: 3em;
+        margin: 0 auto;
+    }
+}
+
+@media only screen and (min-width: 1700px) {
+    .service-image {
+        width: 55%;
+        height: auto;
+    }
+}
+
+@media only screen and (min-width: 1350px) and (max-width: 1699px) {
+    .service-image {
+        width: 70%;
+        height: auto;
+    }
+}
+
+@media only screen and (max-width: 1030px) {
+    .services-text {
+        margin-top: -1em;
+        margin: 0 auto;
+    }
+
+    .services-header {
+        margin-top: 1em;
+    }
+}
+
+
+/*---------- 6 | About Section ----------*/
+
+#about {
+    background-color: #efe2da;
+}
+
+.about-image {
+    width: 100%;
+    float: right;
+}
+
+.about-text {
+    width: 95%;
+    margin-left: 3em;
+    margin-top: 3em;
+    font-family: 'Open Sans',
+        sans-serif;
+    font-size: 10pt;
+}
+
+.about-text ul {
+    margin-left: -1.3em;
+    margin-top: 1em;
+}
+
+.about-text ul li {
+    font-size: 10pt;
+}
+
+.about-header {
+    font-family: "Magnat-Head";
+}
+
+@media only screen and (min-width: 1700px) {
+    .about-image {
+        width: 55%;
+        height: auto;
+    }
+}
+
+@media only screen and (min-width: 1350px) and (max-width: 1699px) {
+    .about-image {
+        width: 70%;
+        height: auto;
+    }
+}
+
+@media only screen and (max-width: 1130px) {
+    .about-text {
+        margin-top: -5em;
+        margin: 0 auto;
+        padding: 1em;
+    }
+}
+
+
+/*---------- 7 | Psychotherapy Section ----------*/
+
+#psychotherapy {
+    background-color: #bc968b;
+}
+
+#psychotherapy hr {
+    width: 55%;
+    border-top: 1px solid #f0e3db;
+    margin-left: 3em;
+    margin-top: 4em;
+    margin-bottom: 4em;
+}
+
+@media only screen and (max-width: 800px) {
+    #psychotherapy hr {
+        width: 90%;
+        border-top: 1.5px solid #f0e3db;
+        margin-left: 0;
+        margin-top: 3em;
+        margin-bottom: 3em;
+        margin: 0 auto;
+    }
+}
+
+
+.psychotherapy-image {
+    width: 100%;
+}
+
+.psychotherapy-text {
+    width: 90%;
+    margin-left: 3em;
+    margin-top: 3em;
+    font-family: 'Open Sans',
+        sans-serif;
+    font-size: 10pt;
+    color: #f0e3db;
+}
+
+.psychotherapy-text ul {
+    margin-left: -1.3em;
+    margin-top: 1em;
+}
+
+.psychotherapy-text ul li {
+    font-size: 10pt;
+}
+
+.psychotherapy-header {
+    font-family: "Magnat-Head";
+}
+
+.read_more {
+    margin-left: 2.5em;
+    padding: 0.3em 2em 0.3em 2em;
+    border: none;
+    color: #e9d9cf;
+    background-color: #003a40;
+}
+
+.read_more:hover {
+    background-color: #487a7b;
+}
+
+@media only screen and (min-width: 1350px) and (max-width: 1410px) {
+    .psychotherapy-text {
+        margin-top: -2em;
+    }
+}
+
+@media only screen and (min-width: 1350px) {
+    .psychotherapy_2 {
+        display: none;
+    }
+
+}
+
+@media only screen and (min-width: 1220px) and (max-width: 1350px) {
+    .psychotherapy-image {
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 1080px) {
+    .psychotherapy-text {
+        margin-top: -4em;
+        margin: 0 auto;
+    }
+}
+
+
+@media only screen and (max-width: 991px) {
+    .read_more {
+        margin-bottom: 1em;
+    }
+}
+
+/*---------- 8 | How Section ----------*/
+#how {
+    background-color: #eaebef;
+}
+
+.how-image {
+    width: 100%;
+    float: right;
+}
+
+.how-text {
+    width: 95%;
+    margin-left: 3em;
+    margin-top: 3em;
+    font-family: 'Open Sans',
+        sans-serif;
+    font-size: 10pt;
+}
+
+.how-header {
+    font-family: "Magnat-Head";
     margin-bottom: 1em;
 }
 
-.answer {
-    max-width: 800px;
-    text-align: justify;
+@media only screen and (min-width: 1700px) {
+    .how-image {
+        width: 55%;
+        height: auto;
+    }
 }
 
-/*----- 6 | Fråga 2 -----*/
+@media only screen and (min-width: 1350px) and (max-width: 1699px) {
+    .how-image {
+        width: 70%;
+        height: auto;
+    }
+}
 
-.list,
-.list2 {
-    margin-left: 2em;
+@media only screen and (max-width: 991px) {
+    .how-text {
+        margin-bottom: 3em;
+        margin: 0 auto;
+    }
+}
+
+/*---------- 9 | Rules Section ----------*/
+#rules {
+    background-color: #efe2da;
+}
+
+.rules-image {
+    width: 100%;
+}
+
+.rules-text {
+    width: 95%;
+    margin-left: 3em;
+    margin-top: 3em;
+    font-family: 'Open Sans',
+        sans-serif;
+    font-size: 10pt;
+}
+
+.rules-text a {
+    color: black;
+    text-decoration-line: underline;
+    font-weight: bold;
+}
+
+.rules-list {
+    margin-left: -3em;
+}
+
+.rules-list li {
+    margin-bottom: 5px;
+}
+
+.rules-header {
+    font-family: "Magnat-Head";
+    margin-bottom: 1em;
+}
+
+@media only screen and (min-width: 1700px) {
+    .rules-image {
+        width: 55%;
+        height: auto;
+    }
+}
+
+@media only screen and (min-width: 1350px) and (max-width: 1699px) {
+    .rules-image {
+        width: 70%;
+        height: auto;
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .rules-text {
+        margin-bottom: 3em;
+        margin: 0 auto;
+    }
+}
+
+/*---------- 10 | Contact Section ----------*/
+
+
+#contact {
+    background-color: #003a40;
+    height: 370px;
+}
+
+.wrapper {
+    background: #fbfbfb;
+    margin: 0 auto;
+}
+
+.contact-hr {
+    width: 40%;
+    border-top: 1px solid #efe2da;
+    margin-top: 3em;
+    margin-bottom: 2em;
+    margin-left: 13px;
+}
+
+.contact-header {
+    font-family: "Magnat-Head";
+    margin-bottom: 1em;
+    color: #efe2da;
+    padding-left: 13px;
+}
+
+.contact-text {
+    background: #fbfbfb;
+    font-family: 'Open Sans',
+        sans-serif;
+    font-size: 10pt;
+    float: left;
+    padding: 2em;
+}
+
+.contact-map {
+    padding: 2em;
+}
+
+.contact-logo {
+    margin-left: 4em;
+    margin-top: 4em;
+    width: 250px;
+}
+
+.adress-line {
+    margin-left: 23px;
+}
+
+.symbol {
+    width: 20px;
+    margin-top: -5px;
+}
+
+@media only screen and (max-width: 1289px) {
+
+    .contact-text {
+        text-align: center;
+        float: none;
+    }
+
+    .contact-map {
+        display: none;
+    }
+
+    .contact-header {
+        margin-left: 2em;
+    }
+
+    .contact-hr {
+        margin-left: 5em;
+    }
+
+    @media only screen and (max-width: 800px) {
+        .contact-hr {
+            width: 90%;
+            border-top: 1.5px solid #efe2da;
+            margin-left: 0;
+            margin-top: 3em;
+            margin-bottom: 3em;
+            margin: 0 auto;
+        }
+
+    }
+
+    .contact-logo {
+        margin-right: 45px;
+    }
+
+    .contact-text {
+        margin: 0 auto;
+    }
+}
+
+@media only screen and (min-width: 1289px) {
+    .contact-map2 {
+        display: none;
+    }
+
+}
+
+@media only screen and (min-width: 1500px) {
+
+    #contact-map {
+        width: 500px;
+    }
+
+}
+
+@media only screen and (min-width: 1700px) {
+
+    #contact-map {
+        width: 620px;
+    }
+
 }
