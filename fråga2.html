@@ -20,18 +20,10 @@
         <!-- Main Navigation -->
         <nav class="navigation">
             <ul>
-                <a href="index.html">
-                    <li>Hem</li>
-                </a>
-                <a href="/fråga1.html">
-                    <li>Fråga 1</li>
-                </a>
-                <a href="/fråga2.html">
-                    <li class="active">Fråga 2</li>
-                </a>
-                <a href="/fråga3.html">
-                    <li>Fråga 3</li>
-                </a>
+                <li><a href="index.html">Hem</a></li>
+                <li><a href="/fråga1.html">Fråga 1</a></li>
+                <li><a href="/fråga2.html">Fråga 2</a></li>
+                <li><a href="/fråga3.html">Fråga 3</a></li>
             </ul>
         </nav>
     </header>
@@ -40,7 +32,8 @@
     <main>
         <div class="header">
             <h1>Fråga 2 - HTML5</h1>
-          <a href="/media/elements.png"><img src="/media/elements.png" alt="picture of some html elements" class="hero"></a>  
+            <a href="/media/elements.png"><img src="/media/elements.png" alt="picture of some html elements"
+                    class="hero"></a>
 
         </div>
         <div class="questions">
@@ -48,81 +41,69 @@
             <h2 class="answer">2. Skapa en lista med elementen a, img och ol på varsin rad. Under var och en av dem
                 lägger du in en underlista med de tre
                 exempel på attribut som finns för dem. Du ska endast ta med de attribut som finns i HTML5. (Tips: titta
-                på
-                referenslistan på W3Schools.)
+                på referenslistan på W3Schools.) </h2>
+
+            <h2>Svar:</h2>
+            <h3>1:</h3>
+            <p class="answer">
+                <b>Element - </b>
+                I HTML använder man en rad element för att bygga upp sina dokument. Dessa kapslar man in mellan
+                "&lt;&gt;" och kan exempelvis avse ett textstycke; "&lt;p&gt;", en länk "&lt;a&gt;", en bild "&lt;img&gt;", osv.
+
+                <br> <br>
+                <b>Tagg - </b>
+                En tagg är det vi använder för att specifiera vilken typ ett givet element ska vara.
+                I exemplet på
+                svaret i föregående delfråga gav jag taggen "&lt;p&gt;" som exempel på ett text-element.
+                Detta element avslutar man sedan med sluttaggen "&lt;/p&gt;"
+
+                <br> <br>
+                <b>Attribut - </b>
+                Attribut används sedan för att exempelvis ladda in en bild eller länka till
+                en given URL. Om vi återbesöker första delfrågan lyften jag "< a>" och "< img>". <br>
+                Med attributet "href=" kan jag specifiera vilken länk som
+                länkelementet ska skicka läsaren till på följande vis: <br> <br>
+                "&lt;href=www.lnu.se>&gt;" <br> <br>
+                För att berätta vilken bild jag ska läsa in med "&lt;img&gt;" -
+                elementet måste jag använda attributet "src=" på följande vis:
+                <br> <br>
+                "&lt;img src="/media/picture.jpg&gt;" <br> <br>
+            </p>
 
 
-                <h2>Svar:</h2>
+            <br>
 
-                <h3>1:</h3>
-                <p class="answer">
-                    <b>Element - </b>
-                    I HTML använder man en rad element för att bygga upp sina dokument. Dessa kapslar man in mellan
-                    "<>" och kan exempelvis avse ett textstycke; "< p>", en länk "< a>", en bild "< img>", osv.
+            <h3>2:</h3>
+            <p class="answer">
+            <ol class="list">
+                <li>
+                    <p>a</p>
+                    <ul class="list2">
+                        <li>href</li>
+                        <li>rel</li>
+                        <li>target</li>
+                    </ul>
+                </li>
 
-                                    <br> <br>
-                                    <b>Tagg - </b>
-                                    En tagg är det vi använder för att specifiera vilken typ ett givet element ska vara.
-                                    I exemplet på
-                                    svaret i föregående delfråga gav jag taggen "< p>" som exempel på ett text-element.
-                                        Detta element
-                                        avslutar man sedan med sluttaggen "< / p>"
+                <li>
+                    <p>img</p>
+                    <ul>
+                        <li>alt</li>
+                        <li>src</li>
+                        <li>srcset</li>
+                    </ul>
+                </li>
 
-                                            <br> <br>
-                                            <b>Attribut - </b>
-                                            Attribut används sedan för att exempelvis ladda in en bild eller länka till
-                                            en given URL. Om vi
-                                            återbesöker första delfrågan lyften jag "< a>" och "< img>". <br>
-                                                    Med attributet "href=" kan jag specifiera vilken länk som
-                                                    länkelementet ska skicka läsaren till på följande vis: <br> <br>
-                                                    " < a href=www.lnu.se> " <br> <br>
-                                                        För att berätta vilken bild jag ska läsa in med "< img>" -
-                                                            elementet måste jag använda attributet "src=" på följande
-                                                            vis: <br> <br>
-                                                            "< img src="/media/picture.jpg >" <br> <br>
-
-                </p>
-
-                <br>
-
-                <h3>2:</h3>
-                <p class="answer">
-                <ol class="list">
-                    <br>
-                    <li>
-                        <p>a</p>
-                        <ul class="list2">
-                            <li>href</li>
-                            <li>rel</li>
-                            <li>target</li>
-                        </ul>
-                    </li>
-                    <br>
-
-                    <li>
-                        <p>img</p>
-                        <ul>
-                            <li>alt</li>
-                            <li>src</li>
-                            <li>srcset</li>
-                        </ul>
-                    </li>
-                    <br>
-
-                    <li>
-                        <p>ol</p>
-                        <ul>
-                            <li>Reversed</li>
-                            <li>Start</li>
-                            <li>Type</li>
-                        </ul>
-                    </li>
-                </ol>
-
-                </p>
-
+                <li>
+                    <p>ol</p>
+                    <ul>
+                        <li>Reversed</li>
+                        <li>Start</li>
+                        <li>Type</li>
+                    </ul>
+                </li>
+            </ol>
         </div>
-
     </main>
 
     <!-- Footer Section-->
