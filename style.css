@@ -24,7 +24,7 @@ Struktur:
 }
 
 body {
-    background-color: aliceblue;
+    background-image: url("/media/bg.jpg");
 }
 
 a:hover {

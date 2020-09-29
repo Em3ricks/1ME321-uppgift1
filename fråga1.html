@@ -37,36 +37,48 @@
         <div class="questions">
             <h2>1. Ge en kort beskrivning av var och en av protokollen <i>HTTP, TCP och IP</i></h2>
             <h2>2. Beskriv kort vilka delar följande url består av: <br> </h2>
-                http://medieteknik.lnu.se/1me321/uppg/u1.html#fragor/h2>
+            http://medieteknik.lnu.se/1me321/uppg/u1.html#fragor/h2>
 
-                <h2>Svar:</h2>
+            <h2>Svar:</h2>
 
-                <h3>1:</h3>
-                <p class="answer">
-                    <b>HTTP - </b>
-                    Hypertext Transfer Protocol (HTTP) är kommunikationsprotokollet som används för
-                    överföra hemsidor över informationsnätverket WWW. Vidare är det över HTTP / HTTPS som man överför
-                    exempelvis sina HTML-sidor från webbserver till webbklient.
-                    <br> <br>
+            <h3>1:</h3>
+            <p class="answer">
+                <b>HTTP - </b>
+                Hypertext Transfer Protocol (HTTP) är kommunikationsprotokollet som används för
+                överföra hemsidor över informationsnätverket WWW. Vidare är det över HTTP / HTTPS som man överför
+                exempelvis sina HTML-sidor från webbserver till webbklient.
+            </p>
 
-                    <b>TCP / IP - </b>
-                    Transmission Control Protol är ett dataöverföringsprotokoll som används för majoriteten av den
-                    kommunikation som sker över Internet genom att tillhandahålla en dataström mellan två datorer.
-                    TCP använder sig i sin tur av det underliggande protokollet IP som skickar datan i form av paket.
-                    Dessa paket innehåller en liten mängd data samt information om avsändare och mottagare.
+            <p class="answer">
+                <b>TCP / IP - </b>
+                TCP är en standard som definierar hur man upprättar och underhåller en sk. nätverkskonversation
+                genom vilken program kan utbyta data. TCP verkar i samklang med Internet Protocol (ip), som definierar
+                hur datorer skickar paket med data till varandra. <br> <br>
+            </p>
+            
+            <p class="answer">
+                För att sammanfatta hur dessa tre fungerar ihop kan vi som exempel säga att en webbserver skickar en
+                HTML-fil till en klient och använder då först HTTP / HTTPS för att göra detta. I HTTP-programskiktet
+                görs ber programmet TCP-lagret att ställa in anslutningen och sen skicka filerna. TCP-stacken delar sen
+                upp
+                filen i datapaket, numrerar dem och vidarebefordrar dem sedan en och en till IP-lagret för leverans.
+                TCP-programmet
+                i den mottagande källan godkänner överföringen om inget saknas, monterar sedan paketet till en fil och
+                levererar denna.
+            </p>
 
-                </p>
-                <br>
-                <h3>2:</h3>
-                <p class="answer">
-                    Den inledande delen "http//:" avser vilket protokoll som används. <br>
-                    "Medieteknik.lnu.se" är det domännamn som hemsidans filer är kopplat till. <br>
-                    "/1me321" är det första och absoluta direktivet där webbläsaren söker efter filer. <br>
-                    "/uppg" är ett underliggande direktiv till den absoluta sökvägen <br>
-                    "u1.html" är det HTML-dokument där webbplatsens information lagras. <br>
-                    "#fragor" refeferar till ett sektions-id av HTML-dokumentet <br>
-                    "h2>" slutligen är en överskrift av typen "H2"
-                </p>
+            <br>
+
+            <h3>2:</h3>
+            <p class="answer">
+                Den inledande delen "http//:" avser vilket protokoll som används. <br>
+                "Medieteknik.lnu.se" är det domännamn som hemsidans filer är kopplat till. <br>
+                "/1me321" är det första och absoluta direktivet där webbläsaren söker efter filer. <br>
+                "/uppg" är ett underliggande direktiv till den absoluta sökvägen <br>
+                "u1.html" är det HTML-dokument där webbplatsens information lagras. <br>
+                "#fragor" refeferar till ett sektions-id av HTML-dokumentet <br>
+                "h2>" slutligen är en överskrift av typen "H2"
+            </p>
 
         </div>
 
