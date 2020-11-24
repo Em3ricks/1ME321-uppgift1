@@ -36,7 +36,7 @@
         </div>
         <div class="questions">
             <h2>1. Ge en kort beskrivning av var och en av protokollen <i>HTTP, TCP och IP</i></h2>
-            <h2>2. Beskriv kort vilka delar följande url består av: <br> </h2>
+            <h2>2. Beskriv kort vilka delar följande url består av:  </h2>
             http://medieteknik.lnu.se/1me321/uppg/u1.html#fragor/h2>
 
             <h2>Svar:</h2>
@@ -50,33 +50,43 @@
             </p>
 
             <p class="answer">
-                <b>TCP / IP - </b>
-                TCP är en standard som definierar hur man upprättar och underhåller en sk. nätverkskonversation
-                genom vilken program kan utbyta data. TCP verkar i samklang med Internet Protocol (ip), som definierar
-                hur datorer skickar paket med data till varandra. <br> <br>
+                    <b>TCP / IP - </b>
+                <p>
+                    IP = Internet Protocol och är för varje enhet som är ansluten till internet en unik adress mot vilken
+                    förfrågningar kan göras. Fungerar lite på samma vis som telefonnummer på så vis att varje telefon har
+                    ett unikt som används för att ringa till en specifik person / adress.
+
+                    IP (Internet Protocol) är sammanfattat en typ av adressering samt autentisering.
+                    <b>Sändare:</b> adresserar med IP-adress, paket som inte bekräftas skickas igen
+                    <b>Mottagare:</b> tar emot paket och skickar vidare till TCP, bekräftar mottagna paket.
+                    
+                </p>
+                <p>
+                    <b>TCP (Transmission Control Protocol)</b> - står för ordning / uppdelning av informationspaket
+                    <b>Sändare:</b> delar upp ett meddelande i paket, numrerar dessa och skickar dem vidare till IP.
+                    <b>Mottagare:</b> sätter samman paketen till meddelanden och skickar dem till det program dem är avsedda för. 
+                </p>
             </p>
-            
+
             <p class="answer">
                 För att sammanfatta hur dessa tre fungerar ihop kan vi som exempel säga att en webbserver skickar en
                 HTML-fil till en klient och använder då först HTTP / HTTPS för att göra detta. I HTTP-programskiktet
                 görs ber programmet TCP-lagret att ställa in anslutningen och sen skicka filerna. TCP-stacken delar sen
-                upp
-                filen i datapaket, numrerar dem och vidarebefordrar dem sedan en och en till IP-lagret för leverans.
-                TCP-programmet
-                i den mottagande källan godkänner överföringen om inget saknas, monterar sedan paketet till en fil och
+                upp filen i datapaket, numrerar dem och vidarebefordrar dem sedan en och en till IP-lagret för leverans.
+                TCP-programmet i den mottagande källan godkänner överföringen om inget saknas, monterar sedan paketet till en fil och
                 levererar denna.
             </p>
 
-            <br>
+            
 
             <h3>2:</h3>
             <p class="answer">
-                Den inledande delen "http//:" avser vilket protokoll som används. <br>
-                "Medieteknik.lnu.se" är det domännamn som hemsidans filer är kopplat till. <br>
-                "/1me321" är det första och absoluta direktivet där webbläsaren söker efter filer. <br>
-                "/uppg" är ett underliggande direktiv till den absoluta sökvägen <br>
-                "u1.html" är det HTML-dokument där webbplatsens information lagras. <br>
-                "#fragor" refeferar till ett sektions-id av HTML-dokumentet <br>
+                Den inledande delen "http//:" avser vilket protokoll som används. 
+                "Medieteknik.lnu.se" är det domännamn som hemsidans filer är kopplat till. 
+                "/1me321" är det första och absoluta direktivet där webbläsaren söker efter filer. 
+                "/uppg" är ett underliggande direktiv till den absoluta sökvägen 
+                "u1.html" är det HTML-dokument där webbplatsens information lagras. 
+                "#fragor" refeferar till ett sektions-id av HTML-dokumentet 
                 "h2>" slutligen är en överskrift av typen "H2"
             </p>
 

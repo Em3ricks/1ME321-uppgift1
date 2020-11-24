@@ -98,6 +98,7 @@ a:hover {
 .answer {
     max-width: 800px;
     text-align: justify;
+    padding: 1em 0 1em 0;
 }
 
 /*----- 6 | Fråga 2 -----*/
